@@ -10,6 +10,49 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.line-chart {
+				height:  20px;
+			}
+			div#pos {
+				color: blue;
+				font-size: 24pt;
+			}
+
+			div#neg {
+				color: red;
+				font-size: 24pt;
+			}
+
+			div#mel {
+				color: #000;
+				font-size: 24pt;
+			}
+
+			div#rec {
+				color: #000;
+				font-size: 18pt;
+			}
+
+			div#coments {
+				color: #000;
+				font-size: 20pt;
+			}
+
+			div#rel {
+				color: #000;
+				font-size: 20pt;
+			}
+
+			table#avaliacao {
+				width: 400px;
+			}
+
+			td {
+				width: 200px;
+
+			}			
+		</style>
 	</head>
 	<body class="subpage">
 
@@ -114,9 +157,7 @@
 
 									</p>
 
-									<h3>GRÁFICOS</h3>
-									<canvas class="line-chart"></canvas>
-
+									
 									<hr class="major"/>
 
 									<h3>RELAÇÃO COM OUTRAS LANCHONETES</h3>
@@ -128,7 +169,7 @@
 											ainda mais sua satisfação.
 										</i><br>
 										<strong>Total consumido por lanche:</strong><br><i>
-											Os clientes gastam 8.56 a mais do que na lanchonete Miguelito e <br>R$ 11.75 a mais do que na lanchonete Madá.
+											Os clientes gastam R$8.56 a mais do que na lanchonete Miguelito e <br>R$ 11.75 a mais do que na lanchonete Madá.
 										</i>
 
 									</p>
@@ -168,12 +209,142 @@
 									<hr class="major"/>
 
 									<h3>AVALIAÇÃO GERAL</h3>
-									<p>
-										<h3><b>3 - <i> Bom </i></b></h3>
+									<div class="row">
+						<section class="6u 12u$(medium)">
+							<h2>Avaliação L'amour Café</h2>
+							<!-- Tabela -->
+							<div class="table-wrapper">
+										<table id="avaliacao">
+													<th style="text-align: center; text">Característica</th>
+													<th>Avaliação</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Atendimento</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>Espaço</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>Opções</td>
+													<td>3</td>
+												</tr>
+												<tr>
+													<td>Qualidade</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>Preço</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td>Custo-Benefício</td>
+													<td>3</td>
+												</tr>
+												<tr>
+													<td>Promoções</td>
+													<td>3</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div id="pos">Pontos Positivos </div>
+									<ul>
+										<li> Comodidade</li>
+										<li> Qualidade</li>									
+										<li>Opções</li>
+										
+									</ul>
+									<div id="neg">Pontos Negativos </div>
+									<ul>
+										<li> Preço </li>
+										<li> Tempo de espera </li>
+										<li> Demora </li>
+									</ul>
+									<div id="mel"> Como podemos melhorar isto ?</div>
+									<ul>
+										<li> Melhorar a agilidade do atendimento</li>
+										<li> Lanches mais baratos, com boa qualidade </li>
 
-									</p>
+									</ul>
+								
+									<div id="coments">Comentários Gerais </div>	
+									<br>
+									<p> 	A lanchonete L'amour Café fica em 2º lugar entre as 3 lanchonetes localizadas no entorno da Ufop.<br>
+											A pesar de possuir ótimos lanches, grande variedade e se localizar dentro da UFOP, os preços são
+											considerados caros se comparados aos concorrentes.<br>
+											Outro fator a ser levado em consideração é o tempo de epera na fila, sendo cusado como um dos principais<br>
+											pontos negativos da lanchonete.
+											
 
-									<h4>Comentários</h4>
+										<div id="av">
+										<b> Recomendado no ponto de vista econômico </b><br>
+										<b> Não-recomendado na relação preço-qualidade </b>
+									</div>
+
+									<hr class="major">
+</section>
+									
+			</section>
+		</div>
+			
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="copyright">
+						&copy;LANCHES: Busca 
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/Chart.bundle.min.js"></script>
+			<script src="assets/js/Chart.min.js"></script>
+			<script>
+				var ctx = document.getElementsByClassName("line-chart");
+
+				//Type, Data e Options
+				var chartGraph = new Chart(ctx, {
+					type: 'line',
+					data: {
+						labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
+						datasets: [{
+							label: "TAXA DE CLIQUES - 2017",
+							data: [5,10,5,14,20,15,6,14,8,12,15,5,10],
+							borderWidth: 6,
+							borderColor: 'rgba(77,166,253,0.85)',
+							backgroundcolor: 'transparent'
+						},
+						{ 	label: "TAXA DE CLIQUES - 2018",
+						  	data: [9,14,11,6,5,4,3,8,11,10,13,18,6],
+						  	borderWidth: 6,
+						  	borderColor: 'rgba(6,204,6,0.85)',
+						  	backgroundcolor: 'transparent',
+						  },
+
+						  ]
+					},
+					options: {
+						title: {
+							display: true,
+							fontSize: 20,
+							text: "RELATÓRIO DE CTR ANUAL"
+						},
+						labels: {
+							fontStyle: "bold",
+						}
+					}
+				})
+			</script>
 									
 
 							</div>	
