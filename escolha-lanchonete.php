@@ -1,7 +1,7 @@
 <?php
 include "control/pesquisa.php";
 session_start();
-$pesquisa = new pesquisa();
+//$pesquisa = new pesquisa();
 
 /*$pesquisa->setPreco($_GET['preco']);
 $pesquisa->setProduto($_GET['produto']);
