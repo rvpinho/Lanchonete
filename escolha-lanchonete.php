@@ -1,7 +1,7 @@
 <?php
 include "control/pesquisa.php";
 session_start();
-//$pesquisa = new pesquisa();
+$pesquisa = new pesquisa();
 
 /*$pesquisa->setPreco($_GET['preco']);
 $pesquisa->setProduto($_GET['produto']);
@@ -17,11 +17,12 @@ $pesquisa->setAtendimento($_GET['atendimento']);*/
 -->
 <html>
 	<head>
-		<title>BUSCA LANCHES</title>
+		<title>Lanchonetes</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="icon" type="imagem/png" href="images/cafe.png">
 
 		<style>
 			.lanchonetes {
@@ -40,7 +41,8 @@ $pesquisa->setAtendimento($_GET['atendimento']);*/
 			<header id="header">
 				<div class="inner">
 				  <nav id="nav">
-					  <a href="index.html">Home</a>		
+					  <a href="index.html">Home</a>	
+					  <a href="sobre.html">Sobre</a>	
 					  <a href="escolha-lanchonete.php">Lanchonetes</a>
 					  <a href="avaliar.html">Avaliar serviços
 					  <a href="pesquisar.php">Buscar</a></a></section>
@@ -59,7 +61,7 @@ $pesquisa->setAtendimento($_GET['atendimento']);*/
 						<h1>Lanchonete</h1>
 						<br><br>
 						<div class="lanchonetes">
-							<a href="lanchonete.html"><p> Lamur Café </p></a>
+							<a href="lanchonete.html"><p> L'amour Café </p></a>
 							<a href="lanchonete-mada.html"><p> Madá </p></a>
 							<a href="lanchonete-miguelito.html"><p> Miguelito </p></a>
 						</div>
