@@ -1,14 +1,4 @@
-<?php
-include "control/pesquisa.php";
-session_start();
-$pesquisa = new pesquisa();
 
-/*$pesquisa->setPreco($_GET['preco']);
-$pesquisa->setProduto($_GET['produto']);
-$pesquisa->setQualidade($_GET['qualidade']);
-$pesquisa->setAtendimento($_GET['atendimento']);*/
-
-?>
 <!DOCTYPE HTML>
 <!--
 	Projection by TEMPLATED
@@ -62,7 +52,7 @@ $pesquisa->setAtendimento($_GET['atendimento']);*/
 						<br><br>
 						<div class="lanchonetes">
 							<a href="lanchonete.html"><p> L'amour Café </p></a>
-							<a href="lanchonete-mada.html"><p> Madá </p></a>
+							<a href="lanchonete-Mada.html"><p> Madá </p></a>
 							<a href="lanchonete-miguelito.html"><p> Miguelito </p></a>
 						</div>
 						
