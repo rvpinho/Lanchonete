@@ -52,7 +52,7 @@
 						<br><br>
 						<div class="lanchonetes">
 							<a href="lanchonete.html"><p> L'amour Café </p></a>
-							<a href="lanchonete-Mada.html"><p> Madá </p></a>
+							<a href="lanchonete-mada.html"><p> Madá </p></a>
 							<a href="lanchonete-miguelito.html"><p> Miguelito </p></a>
 						</div>
 						
